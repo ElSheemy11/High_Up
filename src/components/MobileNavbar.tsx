@@ -14,7 +14,7 @@ const MobileNavbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState (false)
     const { isSignedIn } = useAuth()
     const { theme, setTheme } = useTheme()
-
+    
   return (
     <div className='flex md:hidden items-center space-x-2'>
         <Button
@@ -39,7 +39,7 @@ const MobileNavbar = () => {
                 </SheetHeader>
                 <nav className='flex flex-col space-y-4 mt-6'>
                     <Button variant={"ghost"} className='flex items-center gap-3 justify-start' asChild>
-                        <Link href="/">
+                        <Link href={`/`}>
                             <HomeIcon className='w-4 h-4' />
                             Home
                         </Link>
@@ -54,7 +54,8 @@ const MobileNavbar = () => {
                                 </Link>
                             </Button>
                             <Button variant="ghost" className='flex items-center gap-3 justify-start' asChild>
-                                <Link href="/profile">
+                                {/* TODO: FIX MOBILE ROUTES */}
+                                <Link href={`/profile/`}>
                                     <UserIcon className='w-4 h-4' />
                                     Profile
                                 </Link>
